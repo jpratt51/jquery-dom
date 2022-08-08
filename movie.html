@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .form {
+            display:inline-block;
+            text-align:left;
+            margin:auto;
+            font-size: 50px;
+        }
+    </style>
+    <title>Movies App!</title>
+</head>
+<body>
+    <div id="container" class="form">
+        <form>
+            Movie Rating! <br>
+            <label>Movie<input id="movie"></label><br>
+            <label>Rating<input id="rating"></label>
+            <button>Submit</button>
+        </form>
+        <div id="list">
+            <ul></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+$('button').click( function (e) {
+    e.preventDefault();
+    $('div#list ul').append('li').text($('input#movie').val() + " " + $('input#rating').val())
+})
+    </script>
+</body>
+</html>
